@@ -1,0 +1,109 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+}
+body{
+  padding: 0;
+  margin:0;
+  overflow-x: hidden;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+header{
+  width: 100%;
+  height: 40px;
+  background-color: #333;
+  color:#b0b0b0;
+  position: fixed;
+  top: 0;
+  z-index: 2
+}
+header .head{
+  width: 70%;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+header .head .join{
+  line-height: 40px;
+  position: absolute;
+  right:0;
+}
+header .head .join span{
+  margin-right: 15px;
+  cursor: pointer;
+}
+header .head .join .cart{
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  background-color: #424242;
+}
+.detail{
+  position: relative;
+  margin-top: 10rem;
+  width:100%;
+  padding-left: 3rem;
+  /* padding: 2rem; */
+
+  /* background-color: #e0e0e0; */
+}
+.detail .product_img{
+  position: absolute;
+  left: 0;
+  width:40%;
+}
+.detail .product_img img{
+  width: 100%;
+  object-fit: cover;
+}
+.detail .product_info{
+
+  left: 40%;
+  width: 50%;
+  /* background-color: red; */
+  position: relative;
+}
+.detail .product_info h1{
+  font-size: 3rem;
+}
+.detail .product_info h2{
+  font-size: 2rem;
+}
+.detail .product_info input{
+  margin-top: 4rem;
+}
+.detail .product_info .button button{
+  margin-top: 5rem;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #448AFF;
+  cursor: pointer;
+  width:8rem;
+  height: 3rem;
+}
+.detail .product_info .button button:nth-of-type(2){
+  width: 16rem;
+  margin-left: 2rem;
+  background-color: #ff6700;
+}
+.detail .detail_info{
+  position: relative;
+  width:100%;
+  height: 200px;
+  /* background-color: red; */
+}
+.detail .detail_info h1{
+
+}
+.detail .detail_info .info{
+  width: 90%;
+  height: 200px;
+  background-color: red;
+}

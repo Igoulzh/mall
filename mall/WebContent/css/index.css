@@ -1,0 +1,173 @@
+html{
+	width:100%;
+	height:100%;
+}
+body{
+  height: 100%;
+  width: auto;
+  color: #424242
+}
+body,ul{
+  padding: 0;
+  margin:0;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.icon {
+       fill: currentColor;
+       overflow: hidden;
+    }
+header{
+  width: 100%;
+  height: 40px;
+  background-color: #333;
+  color:#b0b0b0;
+  position: fixed;
+  top: 0;
+  z-index: 2
+}
+header .head{
+  width: 70%;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+header .head .join{
+  line-height: 40px;
+  position: absolute;
+  right:0;
+}
+header .head .join span{
+  margin-right: 15px;
+  cursor: pointer;
+}
+header .head .join .cart{
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  background-color: #424242;
+}
+.search{
+  width: 70%;
+  height: 40px;
+  /* background-color: red; */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 120px;
+}
+.search .search_box{
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  right: 0;
+}
+.search .search_box input{
+  width: 86%;
+  height: 100%;
+  outline: none;
+  font-size: 15px;
+  color: #424242;
+  padding-left: 15px;
+  border: 1px solid #BDBDBD;
+}
+.search .search_box .icon{
+  text-align: right;
+  width: 12%;
+  height:55%;
+  vertical-align:sub;
+  cursor: pointer;
+}
+.slider{
+  /* width:70%;*/
+  height: 60%;
+  position: relative;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 35px;
+}
+.slider .list{
+  position: absolute;
+  list-style: none;
+}
+.slider .list .item{
+  height: 100%;
+  float: left;
+}
+.slider .list .item img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.slider .prev,.slider .next{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+}
+.slider .prev .icon,.slider .next .icon{
+  width: 40px;
+  color:#FAFAFA;
+  cursor: pointer;
+}
+.slider .next{
+  right: 0;
+}
+.main{
+  width: 70%;
+  height: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.main .tehui_img{
+  width: 100%;
+  text-align: center;
+}
+.main .tehui_goods{
+  width: 100%;
+  display: flex;
+}
+.main .tehui_goods span{
+  height: 180px;
+  margin:10px;
+  margin-top: 20px;
+  flex:1
+}
+.main .tehui_goods span img{
+  height: 100%;
+  object-fit: cover;
+}
+.main .shangjia{
+  position: relative;
+  width: 100%;
+}
+.main .shangjia .shangjia_info{
+  margin-top: 60px;
+  position: relative;
+  text-align: left;
+}
+.main .shangjia h1,.main .shangjia h2{
+  position: absolute;
+  top: 40px;
+  font-size: 32px;
+  transition: 1s;
+}
+.main .shangjia h2{
+  top: 80px;
+}
+.main .shangjia .shangjia_info img{
+  object-fit: cover;
+}
+footer{
+}

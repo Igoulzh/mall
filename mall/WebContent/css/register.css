@@ -1,0 +1,33 @@
+
+/* .register_box input:nth-of-type(2){
+  width: 60%;
+}
+.register_box .confirmnation{
+  display: inline-block;
+  width: 22%;
+  height: 2.5rem;
+  background-color: #F57C00;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 2.5rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+} */
+.register_box{
+  height: 80%;
+}
+.register_box input:first-of-type{
+  margin-top: 4rem;
+}
+.register_box font{
+  display: block;
+  text-align: left;
+  width:86%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 1.6rem;
+  color: red
+}
+。
