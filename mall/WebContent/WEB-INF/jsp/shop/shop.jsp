@@ -1,0 +1,80 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <style media="screen">
+    .content{
+    }
+    .card{
+      float: left;
+      width: 24%;
+      height: auto;
+      margin: 0.5%;
+
+    }
+    .card:hover{
+      border: 1px solid #e0e0e0;
+      cursor: pointer;
+    }
+    .card img{
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .card h1,.card h2{
+      padding: 0;
+      margin: 0;
+      font-weight: bold;
+      text-align: center;
+    }
+    .card h1{
+      font-size: 20px;
+    }
+    .card h2{
+      font-size: 16px
+    }
+  </style>
+  <body>
+    <ol class="breadcrumb">
+        <li><a href="#">首页</a></li>
+        <li class="active">xx店</li>
+    </ol>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12  content">
+          <div class="card">
+            <img src="../img/tehui_goods1.jpg" alt="">
+            <h2>马琳达</h2>
+            <h1>¥ 49.00 </h1>
+          </div>
+          <div class="card">
+            <img src="../img/tehui_goods2.jpg" alt="">
+            <h2>OUMBÄRLIG 欧巴丽</h2>
+            <h1>¥ 99.00</h1>
+          </div>
+          <div class="card">
+            <img src="../img/tehui_goods3.jpg" alt="">
+            <h2>STABIL 斯塔比尔</h2>
+            <h1>¥ 39.90</h1>
+          </div>
+          <div class="card">
+            <img src="../img/tehui_goods1.jpg" alt="">
+          </div>
+          <div class="card">
+
+          </div>
+          <div class="card">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>

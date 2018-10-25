@@ -36,7 +36,7 @@ public class PageController {
 		//若账号不存在，则添加
 		userService.add(user);
 		
-		return "registerSucessPage";
+		return "registerSuccessPage";
 	}
 	
 	@RequestMapping("login")
@@ -44,13 +44,24 @@ public class PageController {
 			//HtmlUtils转义
 			account=HtmlUtils.htmlEscape(account);
 			User user=userService.get(account, password);
-			
+
 			if(null==user) {
 				model.addAttribute("message","账号密码错误");
 				return "login";
 			}
-			session.setAttribute("user",user);
-			return "homepage";
+			if(null!=user&&null==user.getType()){
+				session.setAttribute("user",user);
+				return "homepage";
+			}
+			if(null!=user&&0==user.getType()) {
+				session.setAttribute("user",user);
+				return "homepage";
+			}
+			if(user!=null&&1==user.getType()){
+			return "redirect:admin";
+		}
+
+			return "login";			
 	}
 	@RequestMapping("logout")
 	public String logout(HttpSession session){
@@ -58,4 +69,5 @@ public class PageController {
 		return "homepage";
 		
 	}
+	
 }

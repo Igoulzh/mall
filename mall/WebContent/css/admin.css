@@ -1,0 +1,34 @@
+html,body{
+  width: 100%;
+  height: 100%;
+}
+body{
+  margin: 0;
+}
+ul{
+  list-style: none;
+}
+header{
+  height: 40px;
+  width: 100%;
+  background-color: blue;
+}
+header h1{
+  line-height: 40px;
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  margin-left: 18px;
+}
+.panel-group{
+  padding: 0;
+
+}
+.panel-group .panel{
+  border-radius: 0;
+}
+.iframe{
+  /* display: inline-block; */
+  min-height: 100%;
+}

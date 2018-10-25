@@ -11,7 +11,7 @@ public class User {
 
     private String password;
 
-    private Boolean gender;
+    private Integer gender;
 
     private String address;
 
@@ -21,7 +21,7 @@ public class User {
 
     private String telephone;
 
-    private Boolean type;
+    private Integer type;
 
     public Integer getId() {
         return id;
@@ -55,11 +55,11 @@ public class User {
         this.password = password == null ? null : password.trim();
     }
 
-    public Boolean getGender() {
+    public Integer getGender() {
         return gender;
     }
 
-    public void setGender(Boolean gender) {
+    public void setGender(Integer gender) {
         this.gender = gender;
     }
 
@@ -95,11 +95,27 @@ public class User {
         this.telephone = telephone == null ? null : telephone.trim();
     }
 
-    public Boolean getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(Boolean type) {
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", account='" + account + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", gender=" + gender +
+                ", address='" + address + '\'' +
+                ", birthday=" + birthday +
+                ", images='" + images + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", type=" + type +
+                '}';
+    }
+
+    public void setType(Integer type) {
         this.type = type;
     }
 }

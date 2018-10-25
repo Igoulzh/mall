@@ -1,15 +1,16 @@
 package com.mall.controller;
 
-import javax.servlet.http.HttpSession;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.util.HtmlUtils;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.mall.pojo.Product;
 import com.mall.pojo.User;
+import com.mall.service.ProductService;
 import com.mall.service.UserService;
 
 @Controller
@@ -17,6 +18,8 @@ import com.mall.service.UserService;
 public class JumpController {
 	@Autowired
 	UserService userService;
+	@Autowired
+	ProductService productService;
 	
 	@RequestMapping("homePage")
 	public String homePage() {
@@ -30,8 +33,17 @@ public class JumpController {
 	public String registerPage() {
 		return "register";
 	}
-	@RequestMapping("detailPage")
-	public String detailPage() {
-		return "detail";
+	
+	@RequestMapping("testPage")
+	public ModelAndView testPage(){
+		ModelAndView mav=new ModelAndView();
+		mav.setViewName("test");
+		return mav;
+	}
+	@RequestMapping("test")
+	public void test(String name){
+		ModelAndView mav=new ModelAndView();
+		List<User> user=userService.list();
+		System.out.println(name);
 	}
 }

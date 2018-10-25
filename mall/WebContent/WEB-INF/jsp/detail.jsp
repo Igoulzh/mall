@@ -13,7 +13,7 @@
     <header>
       <div class="head">
         <div class="join">
-          <span><a href="#">用户：XXX</a></span>
+          <span><a href="infoPerfectionPage?id=${user.id}">用户：${user.account}</a></span>
           <span class="cart">购物车</span>
         </div>
       </div>
@@ -23,15 +23,14 @@
         <img src="../img/tehui_goods1.jpg" alt="">
       </div>
       <div class="product_info">
-        <h2>MALINDA 马林达</h2>
-        <h3>椅子垫, 红色</h3>
-        <h1>¥ 49.00</h1>
-        <p>填充厚实，即使放在最硬的椅子上，也能让你倍感柔软舒适。
-          两面完全一致可双面使用——当一面磨损或弄脏后，只需翻转椅垫即可继续使用。</p>
+        <h2>${product.name}</h2>
+        <h3>${product.description }</h3>
+        <h1>${product.price}</h1>
+        <p>${product.detail}</p>
         数量：<input type="text" name="num" value="" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="输入数字"/>
-        <p>库存：22</p>
+        <p>库存：66</p>
         <div class="button">
-          <button type="button" name="button">添加到购物车</button>
+          <button type="button" name="button" id="addToShoppingTrolley">添加到购物车</button>
           <button type="button" name="button">购买</button>
         </div>
 
@@ -42,7 +41,20 @@
 
         </div>
       </div>
-
+		
     </section>
   </body>
+  <script>
+  	$("#addToShoppingTrolley").click(function(){
+  		var productId=${product.id};
+  		var page="addToShoppingTrolley";
+  		$.ajax({
+  			url:page,
+  			data:productId,
+  			success:function(){
+  				
+  			}
+  		});
+  	})
+  </script>
 </html>
