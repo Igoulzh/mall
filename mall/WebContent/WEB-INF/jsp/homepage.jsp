@@ -17,11 +17,15 @@
 		<div class="join">
 			<c:choose>
 				<c:when test="${!empty user}">
+					<span><a href="homePage2">简易浏览</a></span>
+					<span></span>
 					<span><a href="infoPerfectionPage?id=${user.id}">${user.account}</a></span>
 					<span><a href="logout">退出</a></span>
 				</c:when>
 
 				<c:when test="${empty user}">
+					<span><a href="homePage2">简易浏览</a></span>
+					<span></span>
 					<span><a href="loginPage">登录</a></span>
 					<span><a href="registerPage">注册</a></span>
 				</c:when>
@@ -37,6 +41,7 @@
 				xlink:href="#icon-sousuo"></use> </svg>
 		</div>
 	</div>
+
 	<div class="slider">
 		<ul class="list">
 			<li class="item"><img

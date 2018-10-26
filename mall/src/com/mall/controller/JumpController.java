@@ -20,10 +20,21 @@ public class JumpController {
 	UserService userService;
 	@Autowired
 	ProductService productService;
+
 	
 	@RequestMapping("homePage")
-	public String homePage() {
-		return "homepage";
+	public ModelAndView homePage() {
+		ModelAndView mav=new ModelAndView();
+		mav.setViewName("homepage");
+		return mav;
+	}
+	@RequestMapping("homePage2")
+	public ModelAndView homePage2(){
+		List<Product> product=productService.list();
+		ModelAndView mav=new ModelAndView();
+		mav.addObject("product",product);
+		mav.setViewName("homepage2");
+		return mav;
 	}
 	@RequestMapping("loginPage")
 	public String loginPage() {
