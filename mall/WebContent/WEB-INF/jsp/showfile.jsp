@@ -16,6 +16,7 @@
             <br/>
         </c:if>
         <input type="file"  name="items_pic"/>
+        ?
     </td>
 </tr>
 </body>

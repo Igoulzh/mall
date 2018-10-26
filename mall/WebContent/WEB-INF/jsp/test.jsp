@@ -16,7 +16,7 @@
 
 
     <form action="uploadFile"  method="post" enctype="multipart/form-data" >
-        文件<<input type="file"  name="uploadFile">
+        文件<input type="file"  name="uploadFile">
         <input type="submit" value="上传">
     </form>
 </body>
