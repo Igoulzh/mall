@@ -1,17 +1,26 @@
 package com.mall.controller;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
+import com.mall.util.ImageUtil;
+import com.mall.util.UploadedImageFile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mall.pojo.Product;
 import com.mall.pojo.User;
 import com.mall.service.ProductService;
 import com.mall.service.UserService;
+
+import javax.imageio.ImageIO;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("")
@@ -51,10 +60,18 @@ public class JumpController {
 		mav.setViewName("test");
 		return mav;
 	}
-	@RequestMapping("test")
-	public void test(String name){
-		ModelAndView mav=new ModelAndView();
-		List<User> user=userService.list();
-		System.out.println(name);
+	@RequestMapping("uploadFile")
+	public String uploadfile(UploadedImageFile uploadedImageFile, HttpSession session) throws IOException {
+        System.out.println("2222");
+		System.out.println(uploadedImageFile.getImage().getName());
+        File  imageFolder= new File(session.getServletContext().getRealPath("img/category"));
+        File file = new File(imageFolder,5+".jpg");
+        if(!file.getParentFile().exists())
+            file.getParentFile().mkdirs();
+        System.out.println(file.getAbsolutePath()+"1");
+        uploadedImageFile.getImage().transferTo(file);
+        BufferedImage img = ImageUtil.change2jpg(file);
+        ImageIO.write(img, "jpg", file);
+	    return "showfile";
 	}
 }
